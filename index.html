@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Image Gallery</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('animal')">Animal</button>
+    <button onclick="filterImages('baby')">Baby</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('travel')">Travel</button>
+    <button onclick="filterImages('quotes')">Quotes</button>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery">
+
+    <!-- Animal Images -->
+    <div class="gallery-item animal">
+      <img src="image\animal\download (1).jpg" onclick="openLightbox(this)" />
+      <img src="image\animal\download (3).jpg" onclick="openLightbox(this)" />
+      <img src="image\animal\download.jpg" onclick="openLightbox(this)" />
+      <img src="image\animal\images (1).jpg" onclick="openLightbox(this)" />
+      <img src="image\animal\images (2).jpg" onclick="openLightbox(this)" />
+      <img src="image\animal\images (3).jpg" onclick="openLightbox(this)" />
+      <img src="image\animal\images (4).jpg" onclick="openLightbox(this)" />
+      <img src="image\animal\images (5).jpg" onclick="openLightbox(this)" />
+      <img src="image\animal\images (6).jpg" onclick="openLightbox(this)" />
+      <img src="image\animal\images.jpg" onclick="openLightbox(this)" />   
+    </div>
+
+    <!-- Baby Images -->
+    <div class="gallery-item baby">
+      <img src="image\baby\download (1).jpg" onclick="openLightbox(this)" />
+      <img src="image\baby\download.jpg" onclick="openLightbox(this)" />
+      <img src="image\baby\images (1).jpg" onclick="openLightbox(this)" />
+      <img src="image\baby\images (2).jpg" onclick="openLightbox(this)" />
+      <img src="image\baby\images (3).jpg" onclick="openLightbox(this)" />
+      <img src="image\baby\images.jpg" onclick="openLightbox(this)" />
+    </div>
+
+    <!-- Nature Images -->
+    <div class="gallery-item nature">
+      <img src="image\nature\download (1).jpg" onclick="openLightbox(this)" />
+      <img src="image\nature\download (2).jpg" onclick="openLightbox(this)" />
+      <img src="image\nature\download.jpg" onclick="openLightbox(this)" />    
+      <img src="image\nature\images (1).jpg" onclick="openLightbox(this)" />
+      <img src="image\nature\images (2).jpg" onclick="openLightbox(this)" />
+      <img src="image\nature\images (3).jpg" onclick="openLightbox(this)" />
+      <img src="image\nature\images (4).jpg" onclick="openLightbox(this)" />
+      <img src="image\nature\images (5).jpg" onclick="openLightbox(this)" />    
+      <img src="image\nature\images (6).jpg" onclick="openLightbox(this)" />
+      <img src="image\nature\images.jpg" onclick="openLightbox(this)" />
+    </div>
+
+    <!-- Travel Images -->
+    <div class="gallery-item travel">
+      <img src="image\travel\download (2).jpg" onclick="openLightbox(this)" />
+      <img src="image\travel\download.jpg" onclick="openLightbox(this)" />
+      <img src="image\travel\images (1).jpg" onclick="openLightbox(this)" />
+      <img src="image\travel\images (2).jpg" onclick="openLightbox(this)" />    
+      <img src="image\travel\images.jpg" onclick="openLightbox(this)" />
+    </div>
+
+    <!-- Quotes Images -->
+    <div class="gallery-item quotes">
+      <img src="image\coder\download (2).jpg" onclick="openLightbox(this)" />
+      <img src="image\coder\download.jpg" onclick="openLightbox(this)" />
+      <img src="image\coder\download.png" onclick="openLightbox(this)" />
+      <img src="image\coder\images (1).jpg" onclick="openLightbox(this)" />
+      <img src="image\coder\images.jpg" onclick="openLightbox(this)" />
+      <img src="image\coder\images.png" onclick="openLightbox(this)" />
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+    <img class="lightbox-content" id="lightbox-img" />
+    <button class="next" onclick="changeImage(1)">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
